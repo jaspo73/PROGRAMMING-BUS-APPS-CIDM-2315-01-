@@ -1,0 +1,52 @@
+using System;
+
+public class ShapePrinter
+{
+   public static void PrintShape(int n, string shape)
+   {
+       if (shape.ToLower() == "left" && n == 5)
+       {
+           Console.WriteLine($"N is: {n}; shape is {shape}");
+           for (int i = 1; i <= n; i++)
+           {
+               for (int j = 0; j < i; j++)
+               {
+                   Console.Write("*");
+               }
+               Console.WriteLine();
+           }
+       }
+       else if (shape.ToLower() == "right" && n == 5)
+       {
+           Console.WriteLine($"N is: {n}; shape is {shape}");
+           for (int i = 1; i <= n; i++)
+           {
+               // Print leading spaces
+               for (int j = 0; j < n - i; j++)
+               {
+                   Console.Write(" ");
+               }
+               // Print stars
+               for (int k = 0; k < i; k++)
+               {
+                   Console.Write("*");
+               }
+               Console.WriteLine();
+           }
+       }
+       else
+       {
+           Console.WriteLine("This method currently only supports 'left' or 'right' shapes with N = 5.");
+       }
+   }
+
+   public static void Main(string[] args)
+   {
+       // Example usage:
+       PrintShape(5, "left");
+       Console.WriteLine(); // Add a blank line for separation
+       PrintShape(5, "right");
+       Console.WriteLine();
+       PrintShape(3, "left"); // This will print the "unsupported" message
+   }
+}
