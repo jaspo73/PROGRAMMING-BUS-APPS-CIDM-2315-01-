@@ -1,0 +1,27 @@
+namespace FindLargeNumber;
+
+
+   class FindLargeNumber
+{
+    
+    public static int FindLargestNumber(int num1, int num2)
+    {
+        if (num1 > num2)
+        {
+            return num1;
+        }
+        else
+        {
+            return num2;
+        }
+    }
+
+    public static void Main(string[] args)
+    {
+        int numberA = 1;
+        int numberB = 2;
+
+        int largest = FindLargestNumber(numberA, numberB);
+        Console.WriteLine($"The largest number between {numberA} and {numberB} is: {largest}");
+    }
+}
