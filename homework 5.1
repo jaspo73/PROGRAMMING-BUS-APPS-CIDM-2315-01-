@@ -1,0 +1,36 @@
+homework 5
+Q1 (2 points): Write a C# method that:
+- get 2 integers as inputs from the keyboard
+- and returns the largest one
+- call this method in Main() and print the result.
+
+
+class Program
+{
+   static void Main(string[] args)
+   {
+       Console.WriteLine("enter first number");
+       int firstNumber = Convert.ToInt32(Console.ReadLine());
+
+
+       Console.WriteLine("enter second number");
+       int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+
+       Console.Write($"a = {firstNumber}; ");
+       Console.WriteLine($"b = {secondNumber}");
+
+
+       if (firstNumber > secondNumber)
+       {
+           Console.WriteLine($"the largest number is: {firstNumber}");
+       }
+       else
+       {
+           Console.WriteLine($"the largest number is {secondNumber}");
+       }
+
+
+   }
+}
+
