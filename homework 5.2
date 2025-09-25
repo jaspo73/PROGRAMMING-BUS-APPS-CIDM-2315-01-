@@ -1,0 +1,100 @@
+Q2 (3 points): Write a C# method:
+- get 4 integers as inputs from the keyboard
+- and returns the largest one
+- you should use the method from Q1 to solve this exercise. (You will lose 2 points if you didn’t use the method from Q1 to answer this question)
+- call this method in Main() and print the result.
+
+
+Hint: Call the Q1 method 3 times:
+Compare a and b to get max1;
+Then compare c and d to get max2;
+Finally, compare max1 and max2 to get max.
+
+
+namespace frustrating24sep;
+
+
+class Program
+{
+   static void Main(string[] args)
+   {
+       Console.WriteLine("enter first number");
+       int firstNumber = Convert.ToInt32(Console.ReadLine());
+
+
+       Console.WriteLine("enter second number");
+       int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+
+       Console.WriteLine("enter third number");
+       int thirdNumber = Convert.ToInt32(Console.ReadLine());
+
+
+       Console.WriteLine("enter fourth number");
+       int fourthNumber = Convert.ToInt32(Console.ReadLine());
+
+
+       Console.Write($"a = {firstNumber}; ");
+       Console.Write($"b = {secondNumber}; ");
+       Console.Write($"c = {thirdNumber}; ");
+       Console.WriteLine($"d = {fourthNumber}; ");
+
+
+       if (firstNumber > secondNumber)
+       //firstNumer is largest
+       {
+           if (firstNumber > thirdNumber)
+
+
+               if (firstNumber > fourthNumber)
+               {
+                   Console.WriteLine($"the largest number is {firstNumber}");
+               }
+               else
+               //fourthNumber is largest
+               {
+                   Console.WriteLine($"the largest number is {fourthNumber}");
+               }
+           else
+           //thirdNumber is laargest
+           {
+               if (thirdNumber > fourthNumber)
+               {
+                   Console.WriteLine($"the largest number is {thirdNumber}");
+               }
+
+
+           }
+       }
+       else
+       //secondNumber is largest
+       {
+           if (secondNumber > thirdNumber)
+           {
+               if (secondNumber > fourthNumber)
+               {
+                   Console.WriteLine($"the largest number is {secondNumber}");
+               }
+               else
+               //fourthNUmber is largest
+               {
+                   Console.WriteLine($"the largest number is {fourthNumber}");
+               }
+           }
+           else
+           //thirdNUmber is largest
+           {
+               if (thirdNumber > fourthNumber)
+               {
+                   Console.WriteLine($"the largest number is {thirdNumber}");
+               }
+               else
+               {
+                   Console.WriteLine($"the largest number is {fourthNumber}");
+               }
+
+
+           }
+       }
+   }
+}
