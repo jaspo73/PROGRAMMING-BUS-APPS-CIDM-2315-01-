@@ -1,0 +1,30 @@
+namespace sep25practice;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("input user name");
+        string input_username = Console.ReadLine();
+        Console.WriteLine("input password");
+        string input_password11 = Console.ReadLine();
+        Console.WriteLine("input password again");
+        string input_password22 = Console.ReadLine();
+        Console.WriteLine("input birth year");
+        int checkAge = Convert.ToInt32(Console.ReadLine());
+
+        if (input_password22 != input_password11)
+            {
+                Console.WriteLine("wrong password");
+            }
+            else if (checkAge > 2007)
+            {
+                Console.WriteLine("could not creat account");
+            }
+        else
+        {
+            Console.WriteLine("account is created successfully!");
+        }
+
+    }
+}
